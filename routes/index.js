@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   
 	res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({ hi : "Hello world" }));
+    res.send(JSON.stringify({ hi : "Hello world !" }));
 });
 
 module.exports = router;
