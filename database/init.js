@@ -4,7 +4,7 @@ const Sequelize = require('sequelize');
 
 let db = {};
 
-db.sequelize = new Sequelize('hobby-dev', 'okuvrkasatqueh', 'd5ed222042891cb53aa87d46289af3793a629c91f79bddccf2315c67642506f6', {
+db.sequelize = new Sequelize('test-projet', 'okuvrkasatqueh', 'd5ed222042891cb53aa87d46289af3793a629c91f79bddccf2315c67642506f6', {
   host: 'ec2-79-125-12-27.eu-west-1.compute.amazonaws.com', dialect: 'postgres'
 });
 
