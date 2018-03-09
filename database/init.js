@@ -2,11 +2,9 @@ const fs        = require('fs');
 const path      = require('path');
 const Sequelize = require('sequelize');
 
-var db = {};
-
-db.sequelize = new Sequelize('test-projet', 'bouznir', '', {
-  host: 'localhost', dialect: 'postgres'
-});
+let db = {};
+const pathBase = process.env.DATABASE_URL || 'postgres://bouznir:@localhost:5432/test-projet'
+db.sequelize = new Sequelize(pathBase);
 
 let model_pathname = path.join(__dirname, 'models');
 
