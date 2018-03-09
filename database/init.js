@@ -1,10 +1,11 @@
 const fs        = require('fs');
 const path      = require('path');
 const Sequelize = require('sequelize');
+require('dotenv').config()
 
 let db = {};
-const pathBase = process.env.DATABASE_URL || 'postgres://bouznir:@localhost:5432/test-projet'
-db.sequelize = new Sequelize(pathBase);
+//const pathBase = process.env.DATABASE_URL || 'postgres://bouznir:@localhost:5432/test-projet'
+db.sequelize = new Sequelize(process.env.DATABASE_URL);
 
 let model_pathname = path.join(__dirname, 'models');
 
