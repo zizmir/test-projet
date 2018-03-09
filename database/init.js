@@ -4,8 +4,8 @@ const Sequelize = require('sequelize');
 
 let db = {};
 
-db.sequelize = new Sequelize('test-projet', 'okuvrkasatqueh', 'd5ed222042891cb53aa87d46289af3793a629c91f79bddccf2315c67642506f6', {
-  host: 'ec2-79-125-12-27.eu-west-1.compute.amazonaws.com', dialect: 'postgres'
+db.sequelize = new Sequelize('test-projet', 'bouznir', '', {
+  host: 'localhost', dialect: 'postgres'
 });
 
 let model_pathname = path.join(__dirname, 'models');
@@ -21,3 +21,14 @@ fs
 });
 
 module.exports = db;
+
+/*const Sequelize = require('sequelize')
+const path = process.env.DATABASE_URL  'postgres://bouznir@localhost:5432/test-projet'
+
+const sequelize = new Sequelize(path)
+const User = sequelize.define('user', {
+    firstname: DataTypes.STRING,
+    lastname: DataTypes.STRING,
+    email: DataTypes.STRING
+
+})*/
