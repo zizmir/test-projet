@@ -2,7 +2,7 @@ const fs        = require('fs');
 const path      = require('path');
 const Sequelize = require('sequelize');
 
-let db = {};
+var db = {};
 
 db.sequelize = new Sequelize('test-projet', 'bouznir', '', {
   host: 'localhost', dialect: 'postgres'
